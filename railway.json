@@ -11,5 +11,8 @@
       "dest": "/public/index.php"
     }
   ],
-  "phpVersion": "8.2"
+  "phpVersion": "8.2",
+  "scripts": {
+    "postdeploy": "php artisan optimize"
+  }
 }
