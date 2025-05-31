@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<<<<<<< HEAD
          xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+=======
+         xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd"
+>>>>>>> ab45104df30133a776c37302ffe0fec01274cd77
          bootstrap="vendor/autoload.php"
          colors="true"
 >
     <testsuites>
+<<<<<<< HEAD
         <testsuite name="Unit">
             <directory>tests/Unit</directory>
         </testsuite>
@@ -29,5 +34,15 @@
         <env name="QUEUE_CONNECTION" value="sync"/>
         <env name="SESSION_DRIVER" value="array"/>
         <env name="TELESCOPE_ENABLED" value="false"/>
+=======
+        <testsuite name="Application Test Suite">
+            <directory suffix="Test.php">./tests</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <env name="APP_ENV" value="testing"/>
+        <env name="CACHE_DRIVER" value="array"/>
+        <env name="QUEUE_CONNECTION" value="sync"/>
+>>>>>>> ab45104df30133a776c37302ffe0fec01274cd77
     </php>
 </phpunit>

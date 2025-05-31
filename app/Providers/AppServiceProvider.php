@@ -8,6 +8,7 @@ class AppServiceProvider extends ServiceProvider
 {
     /**
      * Register any application services.
+<<<<<<< HEAD
      */
     public function register(): void
     {
@@ -18,6 +19,12 @@ class AppServiceProvider extends ServiceProvider
      * Bootstrap any application services.
      */
     public function boot(): void
+=======
+     *
+     * @return void
+     */
+    public function register()
+>>>>>>> ab45104df30133a776c37302ffe0fec01274cd77
     {
         //
     }

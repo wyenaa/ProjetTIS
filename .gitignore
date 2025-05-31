@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *.log
 .DS_Store
 .env
@@ -24,3 +25,11 @@ Homestead.yaml
 npm-debug.log
 Thumbs.db
 yarn-error.log
+=======
+/vendor
+/.idea
+Homestead.json
+Homestead.yaml
+.env
+.phpunit.result.cache
+>>>>>>> ab45104df30133a776c37302ffe0fec01274cd77

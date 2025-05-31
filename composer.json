@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "$schema": "https://getcomposer.org/schema.json",
     "name": "laravel/laravel",
     "type": "project",
@@ -21,6 +22,21 @@
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.6",
         "phpunit/phpunit": "^11.5.3"
+=======
+    "name": "laravel/lumen",
+    "description": "The Laravel Lumen Framework.",
+    "keywords": ["framework", "laravel", "lumen"],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": "^8.1",
+        "laravel/lumen-framework": "^10.0"
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.9.1",
+        "mockery/mockery": "^1.4.4",
+        "phpunit/phpunit": "^10.0"
+>>>>>>> ab45104df30133a776c37302ffe0fec01274cd77
     },
     "autoload": {
         "psr-4": {
@@ -35,6 +51,7 @@
         }
     },
     "scripts": {
+<<<<<<< HEAD
         "start": "php -S 0.0.0.0:$PORT -t public",
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
@@ -73,6 +90,16 @@
             "pestphp/pest-plugin": true,
             "php-http/discovery": true
         }
+=======
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+>>>>>>> ab45104df30133a776c37302ffe0fec01274cd77
     },
     "minimum-stability": "stable",
     "prefer-stable": true

@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
@@ -21,6 +22,12 @@ class ClassModel extends Model
 {
     protected $table = 'classes';
 
+=======
+
+class ClassModel extends Model
+{
+    protected $table = 'classes';
+>>>>>>> ab45104df30133a776c37302ffe0fec01274cd77
     protected $fillable = [
         'user_id',
         'nama_kelas',
@@ -31,6 +38,7 @@ class ClassModel extends Model
     ];
 
     /**
+<<<<<<< HEAD
      * Parse jadwal string (format: "Hari, HH:MM-HH:MM") ke array
      *
      * @return array{hari: string, jam_mulai: string, jam_selesai: string}
@@ -57,4 +65,24 @@ class ClassModel extends Model
     {
         return $this->belongsTo(User::class);
     }
+=======
+     * Parse jadwal string ke dalam array untuk pengurutan
+     */
+    public function parseJadwal()
+    {
+        $parts = explode(', ', $this->jadwal);
+        $hari = $parts[0];
+        $jam = explode('-', trim($parts[1]));
+        return [
+            'hari' => $hari,
+            'jam_mulai' => $jam[0],
+            'jam_selesai' => $jam[1]
+        ];
+    }
+    
+    public function user(){
+    return $this->belongsTo(User::class);
+    }
+
+>>>>>>> ab45104df30133a776c37302ffe0fec01274cd77
 }

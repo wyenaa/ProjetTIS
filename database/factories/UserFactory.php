@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -15,10 +16,24 @@ class UserFactory extends Factory
      * The current password being used by the factory.
      */
     protected static ?string $password;
+=======
+use App\Models\User;
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+class UserFactory extends Factory
+{
+    /**
+     * The name of the factory's corresponding model.
+     *
+     * @var string
+     */
+    protected $model = User::class;
+>>>>>>> ab45104df30133a776c37302ffe0fec01274cd77
 
     /**
      * Define the model's default state.
      *
+<<<<<<< HEAD
      * @return array<string, mixed>
      */
     public function definition(): array
@@ -41,4 +56,15 @@ class UserFactory extends Factory
             'email_verified_at' => null,
         ]);
     }
+=======
+     * @return array
+     */
+    public function definition()
+    {
+        return [
+            'name' => $this->faker->name,
+            'email' => $this->faker->unique()->safeEmail,
+        ];
+    }
+>>>>>>> ab45104df30133a776c37302ffe0fec01274cd77
 }
